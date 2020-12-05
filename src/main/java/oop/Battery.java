@@ -8,16 +8,13 @@ public class Battery {
     }
 
     public void exchange(Battery another) {
-        /** delta - величина постоянного разряда
-          при единоразовом подключении */
-        int delta = this.load / 10;
-        this.load -= delta;
-        another.load += delta;
+        another.load += this.load;
+        this.load = 0;
     }
 
     public static void main(String[] args) {
-        Battery first = new Battery(100);
-        Battery second = new Battery(50);
+        Battery first = new Battery(70);
+        Battery second = new Battery(30);
         first.exchange(second);
         System.out.println(first.load);
         System.out.println(second.load);
