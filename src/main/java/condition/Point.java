@@ -11,8 +11,7 @@ public class Point {
     }
 
     public Point(int x, int y, int z) {
-        this.x = x;
-        this.y = y;
+        this(x, y);                               /** constructor overload */
         this.z = z;
 
     }
