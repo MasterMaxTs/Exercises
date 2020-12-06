@@ -23,7 +23,8 @@ public class Point {
     }
 
     public double distance3d(Point that) {
-        return Math.sqrt(distance(that) * distance(that) + Math.pow(this.z - that.z, 2));
+        return Math.sqrt(Math.pow(this.x - that.x, 2) + Math.pow(this.y - that.y, 2)
+                + Math.pow(this.z - that.z, 2));
     }
 
     public static void main(String[] args) {
