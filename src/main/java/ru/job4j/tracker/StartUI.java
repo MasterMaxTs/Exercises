@@ -6,8 +6,9 @@ import java.time.format.DateTimeFormatter;
 public class StartUI {
     public static void main(String[] args) {
         Item item = new Item();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
-        String current = item.getDateTime().format(formatter);
-        System.out.println("Текущее время и дата в отформатированном виде: " + current);
+        Tracker tracker = new Tracker();
+        tracker.add(item);
+        System.out.println(tracker.findById(1).getId() + ", "
+                + tracker.findById(1).getName());;
     }
 }
