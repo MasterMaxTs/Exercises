@@ -9,7 +9,7 @@ public class StartUI {
             this.showMenu();
             System.out.println("Select: ");
             int select = Integer.parseInt(scanner.nextLine());
-            if (this.validateSelect(select)) {
+            if (select >= 0 && select < 7) {
                 if (select == 0) {
                     System.out.println("=== Create a new Item ===");
                     System.out.println("Enter name: ");
@@ -74,17 +74,6 @@ public class StartUI {
                 }
             }
         }
-    }
-
-    private boolean validateSelect(int select) {
-        boolean rsl = false;
-        final int[] ARRAY = {0, 1, 2, 3, 4, 5, 6};
-        for (int i = 0; i < ARRAY.length; i++) {
-            if (ARRAY[i] == select) {
-                return true;
-            }
-        }
-        return rsl;
     }
 
     private void showMenu() {
