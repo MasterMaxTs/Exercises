@@ -4,7 +4,7 @@ public class StartUI {
     public static void createItem(Input input, Tracker tracker) {
         System.out.println("=== Create a new Item ===");
         String name = input.askString("Enter name: ");
-        Item item = new Item();
+        Item item = new Item(name);
         item.setName(name);
         tracker.add(item);
     }
@@ -21,7 +21,7 @@ public class StartUI {
         System.out.println("=== Replace a current Item ===");
         int id = input.askInt("Enter id: ");
         String name = input.askString("Enter name: ");
-        Item item = new Item();
+        Item item = new Item(name);
         item.setName(name);
         if (tracker.replace(id, item)) {
             System.out.println("Replace success!");
