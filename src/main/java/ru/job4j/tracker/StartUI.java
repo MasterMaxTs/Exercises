@@ -5,7 +5,6 @@ public class StartUI {
         boolean run = true;
         while (run) {
             this.showMenu();
-            input = new ConsoleInput();
             int select = input.askInt("Select: ");
             if (select >= 0 && select < 7) {
                 if (select == 0) {
