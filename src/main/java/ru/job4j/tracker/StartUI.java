@@ -5,7 +5,6 @@ public class StartUI {
         System.out.println("=== Create a new Item ===");
         String name = input.askString("Enter name: ");
         Item item = new Item(name);
-        item.setName(name);
         tracker.add(item);
     }
 
@@ -22,7 +21,6 @@ public class StartUI {
         int id = input.askInt("Enter id: ");
         String name = input.askString("Enter name: ");
         Item item = new Item(name);
-        item.setName(name);
         if (tracker.replace(id, item)) {
             System.out.println("Replace success!");
         } else {
@@ -43,8 +41,8 @@ public class StartUI {
     public static void findItemById(Input input, Tracker tracker) {
         System.out.println("=== Find item by Id ===");
         int id = input.askInt("Enter id: ");
-        if (tracker.findById(id) != null) {
-            Item item = tracker.findById(id);
+        Item item = tracker.findById(id);
+        if (item != null) {
             System.out.println(item.toString());
         } else {
             System.out.println("The item with id = " + id + " was not found");
