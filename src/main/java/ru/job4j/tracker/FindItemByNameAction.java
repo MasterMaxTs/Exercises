@@ -12,7 +12,7 @@ public class FindItemByNameAction implements UserAction{
         Item[] item = tracker.findByName(name);
         if (item.length > 0) {
             for (int i = 0; i < item.length; i++) {
-                System.out.println(item[i].toString());
+                System.out.println(item[i]);
             }
         } else {
             System.out.println("Items with name \"" + name + "\" were not found");
