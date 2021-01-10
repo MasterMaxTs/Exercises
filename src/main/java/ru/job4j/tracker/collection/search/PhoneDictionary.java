@@ -3,10 +3,14 @@ package ru.job4j.tracker.collection.search;
 import java.util.ArrayList;
 
 public class PhoneDictionary {
-    ArrayList<Person> persons = new ArrayList<>();
+    private ArrayList<Person> persons = new ArrayList<>();
 
     public void add(Person person) {
         this.persons.add(person);
+    }
+
+    public ArrayList<Person> getPersons() {
+        return persons;
     }
 
     /**

@@ -18,10 +18,10 @@ public class PhoneDictionaryTest {
                               person.getPhone(),
                               person.getAddress(),
         };
-        String[]rsl = { phones.persons.get(0).getName(),
-                        phones.persons.get(0).getSurname(),
-                        phones.persons.get(0).getPhone(),
-                        phones.persons.get(0).getAddress(),
+        String[]rsl = { phones.getPersons().get(0).getName(),
+                        phones.getPersons().get(0).getSurname(),
+                        phones.getPersons().get(0).getPhone(),
+                        phones.getPersons().get(0).getAddress(),
         };
         assertThat(rsl, is(expected));
 
