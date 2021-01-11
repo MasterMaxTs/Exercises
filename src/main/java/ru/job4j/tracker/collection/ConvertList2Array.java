@@ -1,7 +1,5 @@
 package ru.job4j.tracker.collection;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class ConvertList2Array {
@@ -10,10 +8,8 @@ public class ConvertList2Array {
         int[][] array = new int[groups][cells];
         int row = 0, cell = 0;
         for (int num : list) {
-            array[row][cell] = num;
-            if (cell < groups - 1) {
-                cell++;
-            } else {
+            array[row][cell++] = num;
+            if (cell == cells) {
                 row++;
                 cell = 0;
             }
