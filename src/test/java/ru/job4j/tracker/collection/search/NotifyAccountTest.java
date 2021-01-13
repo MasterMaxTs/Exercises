@@ -25,4 +25,18 @@ public class NotifyAccountTest {
         );
         assertThat(NotifyAccount.sent(accounts), is(expected));
     }
+
+    @Test
+    public void whenDeleteAccount() {
+        List<Account> accounts = Arrays.asList(
+                new Account("0001250254", "Ilya", "100000"),
+                new Account("0025500365", "Victor", "50000"),
+                new Account("0001250254", "Ilya", "25000")
+        );
+        HashSet<Account> setAccounts = NotifyAccount.sent(accounts);
+        boolean rsl =  setAccounts.add(
+                new Account("0001250254", "Ilya", "25000")
+        );
+        assertThat(rsl, is(false));
+    }
 }
