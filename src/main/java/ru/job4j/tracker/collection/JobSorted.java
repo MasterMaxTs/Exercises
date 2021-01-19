@@ -2,6 +2,7 @@ package ru.job4j.tracker.collection;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class JobSorted {
@@ -13,10 +14,13 @@ public class JobSorted {
         );
         System.out.println(jobList);
         System.out.println("*****************************JobSortedByName*********************************************");
-        Collections.sort(jobList, new JobSortedByName());
+        jobList.sort(new JobSortedByName());
         System.out.println(jobList);
         System.out.println("*****************************JobSortedByPriority*****************************************");
         Collections.sort(jobList);
+        System.out.println(jobList);
+        System.out.println("*****************************JobSortedByReversePriority**********************************");
+        jobList.sort(Comparator.reverseOrder());
         System.out.println(jobList);
     }
 }
