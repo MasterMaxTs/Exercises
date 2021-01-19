@@ -9,18 +9,4 @@ public class SortedItemByName implements Comparator<Item> {
     public int compare(Item first, Item second) {
         return first.getName().compareTo(second.getName());
     }
-
-    public List<Item> sortedByIncreaseName(List<Item> items) {
-        items.sort(new SortedItemByName());
-        return items;
-    }
-
-    public List<Item> sortedByDecreaseName(List<Item> items) {
-        items.sort(new SortedItemByName().reversed());
-        return items;
-    }
-
-
-
-
 }

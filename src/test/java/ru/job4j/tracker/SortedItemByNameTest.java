@@ -12,39 +12,27 @@ public class SortedItemByNameTest {
 
     @Test
     public void whenSortedByIncreaseName() {
-        List<Item> input = Arrays.asList(
-                new Item("Item2"),
-                new Item("Item1"),
-                new Item("Item3")
-        );
-        SortedItemByName sortedItem = new SortedItemByName();
-        List<Item> rsl = sortedItem.sortedByIncreaseName(input);
-        Item[] expected = {
-                new Item("Item1"),
-                new Item("Item2"),
-                new Item("Item3")
-        };
-        for (int i = 0; i < input.size(); i++) {
-            assertThat(rsl.get(i).getName(), is(expected[i].getName()));
-        }
+        Tracker tracker = new Tracker();
+        tracker.add(new Item("Planning"));
+        tracker.add(new Item("Discussing"));
+        tracker.add(new Item("Coding"));
+        List<Item> input = tracker.findAll();
+        input.sort(new SortedItemByName());
+        assertThat(input.get(0).getName(), is("Coding"));
+        assertThat(input.get(1).getName(), is("Discussing"));
+        assertThat(input.get(2).getName(), is("Planning"));
     }
 
     @Test
     public void sortedByDecreaseName() {
-        List<Item> input = Arrays.asList(
-                new Item("Item2"),
-                new Item("Item1"),
-                new Item("Item3")
-        );
-        SortedItemByName sortedItem = new SortedItemByName();
-        List<Item> rsl = sortedItem.sortedByDecreaseName(input);
-        Item[] expected = {
-                new Item("Item3"),
-                new Item("Item2"),
-                new Item("Item1")
-        };
-        for (int i = 0; i < input.size(); i++) {
-            assertThat(rsl.get(i).getName(), is(expected[i].getName()));
-        }
+        Tracker tracker = new Tracker();
+        tracker.add(new Item("Planning"));
+        tracker.add(new Item("Discussing"));
+        tracker.add(new Item("Coding"));
+        List<Item> input = tracker.findAll();
+        input.sort(new SortedItemByName().reversed());
+        assertThat(input.get(0).getName(), is("Planning"));
+        assertThat(input.get(1).getName(), is("Discussing"));
+        assertThat(input.get(2).getName(), is("Coding"));
     }
 }
