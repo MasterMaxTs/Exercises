@@ -1,8 +1,6 @@
 package ru.job4j.tracker;
 
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 public class SortedItemByName implements Comparator<Item> {
     @Override

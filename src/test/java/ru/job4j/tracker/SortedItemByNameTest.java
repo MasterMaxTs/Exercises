@@ -1,8 +1,6 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
-
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -27,8 +25,8 @@ public class SortedItemByNameTest {
     public void sortedByDecreaseName() {
         Tracker tracker = new Tracker();
         tracker.add(new Item("Planning"));
-        tracker.add(new Item("Discussing"));
         tracker.add(new Item("Coding"));
+        tracker.add(new Item("Discussing"));
         List<Item> input = tracker.findAll();
         input.sort(new SortedItemByName().reversed());
         assertThat(input.get(0).getName(), is("Planning"));
