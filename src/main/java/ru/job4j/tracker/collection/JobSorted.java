@@ -14,7 +14,7 @@ public class JobSorted {
         );
         System.out.println(jobList);
         System.out.println("*****************************JobSortedByName*********************************************");
-        jobList.sort(new JobSortedByName());
+        jobList.sort(new JobDescByNameDec());
         System.out.println(jobList);
         System.out.println("*****************************JobSortedByPriority*****************************************");
         Collections.sort(jobList);
