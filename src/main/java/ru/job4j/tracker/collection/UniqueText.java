@@ -10,12 +10,12 @@ public class UniqueText {
         String[] text = duplicateText.split(" ");
         HashSet<String> check = new HashSet<>();
         /*HashSet<String> check = new HashSet<>(Arrays.asList(origin));*/
-        for (String value :
-                origin) {
+        for (String value
+                : origin) {
             check.add(value);
         }
-        for (String value :
-                text) {
+        for (String value
+                : text) {
             if (!check.contains(value)) {
                 return false;
             }

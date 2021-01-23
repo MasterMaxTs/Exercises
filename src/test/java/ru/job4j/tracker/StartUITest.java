@@ -22,8 +22,6 @@ public class StartUITest {
         actions.add(new Exit(output));
         new StartUI(output).init(in, tracker, actions);
         assertThat(tracker.findAll().get(0).getName(), is("Created Item"));
-
-
     }
 
     @Test
@@ -154,7 +152,7 @@ public class StartUITest {
     public void whenInvalidExit() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] { "7", "0" }
+                new String[] {"7", "0"}
         );
         Tracker tracker = new Tracker();
         List<UserAction> actions = new ArrayList<>();

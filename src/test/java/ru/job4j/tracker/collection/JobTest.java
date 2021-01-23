@@ -12,7 +12,8 @@ public class JobTest {
 
     @Test
     public void whenComparatorByNameAndPriorityByDecrease() {
-        Comparator<Job> cmpNamePriorityDec = new JobDescByNameDec().thenComparing(new JobDescByPriorityDec());
+        Comparator<Job> cmpNamePriorityDec = new JobDescByNameDec().thenComparing(
+                new JobDescByPriorityDec());
         int rsl = cmpNamePriorityDec.compare(
                 new Job("Impl task", 0),    /*I -> 73; F -> 70*/
                 new Job("Fix bug", 1)
@@ -22,7 +23,8 @@ public class JobTest {
 
     @Test
     public void whenComparatorByEqualsNameAndPriorityByDecrease() {
-        Comparator<Job> cmpNamePriorityDec = new JobDescByNameDec().thenComparing(new JobDescByPriorityDec());
+        Comparator<Job> cmpNamePriorityDec = new JobDescByNameDec().thenComparing(
+                new JobDescByPriorityDec());
         int rsl = cmpNamePriorityDec.compare(
                 new Job("Fix bug", 1),
                 new Job("Fix bug", 0)

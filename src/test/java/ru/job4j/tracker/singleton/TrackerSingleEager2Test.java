@@ -9,9 +9,9 @@ public class TrackerSingleEager2Test {
 
     @Test
     public void whenWeAddThreeObjTracker() {
-        Tracker[] trackers = {  TrackerSingleEager2.getInstance(),
-                                TrackerSingleEager2.getInstance(),
-                                TrackerSingleEager2.getInstance(),
+        Tracker[] trackers = {TrackerSingleEager2.getInstance(),
+                              TrackerSingleEager2.getInstance(),
+                              TrackerSingleEager2.getInstance(),
         };
         Tracker expected = TrackerSingleEager2.getInstance();
         for (Tracker rsl : trackers) {

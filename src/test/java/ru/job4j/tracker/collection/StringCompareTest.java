@@ -30,7 +30,7 @@ public class StringCompareTest {
     }
 
     @Test
-    public void whenLeftGreaterThanRightResultShouldBePositive () {
+    public void whenLeftGreaterThanRightResultShouldBePositive() {
         StringCompare compare = new StringCompare();
         int rst = compare.compare(
                 "Petrov",
@@ -40,7 +40,7 @@ public class StringCompareTest {
     }
 
     @Test
-    public void secondCharOfLeftGreaterThanRightShouldBePositive(){
+    public void secondCharOfLeftGreaterThanRightShouldBePositive() {
         StringCompare compare = new StringCompare();
         int rst = compare.compare(
                 "Petrov",
@@ -50,7 +50,7 @@ public class StringCompareTest {
     }
 
     @Test
-    public void secondCharOfLeftLessThanRightShouldBeNegative(){
+    public void secondCharOfLeftLessThanRightShouldBeNegative() {
         StringCompare compare = new StringCompare();
         int rst = compare.compare(
                 "Patrova",
@@ -68,6 +68,4 @@ public class StringCompareTest {
         );
         assertThat(rsl, is(1));
     }
-
-
 }

@@ -2,7 +2,7 @@ package ru.job4j.tracker;
 
 import java.util.Scanner;
 
-public class StubInput implements Input{
+public class StubInput implements Input {
     private String[] answers;
     private int position = 0;
 

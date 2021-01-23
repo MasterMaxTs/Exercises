@@ -9,8 +9,8 @@ public class TrackerSingleLazy2Test {
 
     @Test
     public void whenWeAddTwoObjTracker() {
-        Tracker[] trackers = { TrackerSingleLazy2.getInstance(),
-                               TrackerSingleLazy2.getInstance(),
+        Tracker[] trackers = {TrackerSingleLazy2.getInstance(),
+                              TrackerSingleLazy2.getInstance(),
         };
         Tracker expected = TrackerSingleLazy2.getInstance();
         for (Tracker rsl : trackers) {

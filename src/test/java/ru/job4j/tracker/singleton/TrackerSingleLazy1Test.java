@@ -9,9 +9,9 @@ public class TrackerSingleLazy1Test {
 
     @Test
     public void whenWeAddThreeObjTracker() {
-        Tracker[] trackers = {  TrackerSingleLazy1.getInstance(),
-                                TrackerSingleLazy1.getInstance(),
-                                TrackerSingleLazy1.getInstance(),
+        Tracker[] trackers = {TrackerSingleLazy1.getInstance(),
+                              TrackerSingleLazy1.getInstance(),
+                              TrackerSingleLazy1.getInstance(),
         };
         Tracker expected = TrackerSingleLazy1.getInstance();
         for (Tracker rsl : trackers) {

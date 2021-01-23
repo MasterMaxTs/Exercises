@@ -5,8 +5,8 @@ import java.util.*;
 public class OrderConvert {
     public static HashMap<String, Order> process(List<Order> orders) {
         HashMap<String, Order> map = new HashMap<>();
-        for (Order order:
-             orders) {
+        for (Order order
+                : orders) {
             map.put(order.getNumber(), order);
         }
         return map;
@@ -19,8 +19,8 @@ public class OrderConvert {
                 new Order("0003", "Phone")
         );
         HashMap<String, Order> mapOrders = process(orders);
-        for (Map.Entry<String, Order> entry :
-                mapOrders.entrySet()) {
+        for (Map.Entry<String, Order> entry
+                : mapOrders.entrySet()) {
             System.out.printf("Number: %s" + " Order: %s\n",
                     entry.getKey(), entry.getValue());
         }

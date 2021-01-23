@@ -37,9 +37,5 @@ public class JobSorter {
         cmp = new JobDescByPriorityDec().thenComparing(new JobDescByNameDec());
         jobs.sort(cmp);
         showSortedJobs(jobs);
-
-
-
-
     }
 }

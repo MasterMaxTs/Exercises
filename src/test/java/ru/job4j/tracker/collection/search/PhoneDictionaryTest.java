@@ -13,15 +13,15 @@ public class PhoneDictionaryTest {
                 "+786121", "Krasnodar");
         PhoneDictionary phones = new PhoneDictionary();
         phones.add(person);
-        String[] expected = { person.getName(),
-                              person.getSurname(),
-                              person.getPhone(),
-                              person.getAddress(),
+        String[] expected = {person.getName(),
+                             person.getSurname(),
+                             person.getPhone(),
+                             person.getAddress(),
         };
-        String[]rsl = { phones.getPersons().get(0).getName(),
-                        phones.getPersons().get(0).getSurname(),
-                        phones.getPersons().get(0).getPhone(),
-                        phones.getPersons().get(0).getAddress(),
+        String[]rsl = {phones.getPersons().get(0).getName(),
+                       phones.getPersons().get(0).getSurname(),
+                       phones.getPersons().get(0).getPhone(),
+                       phones.getPersons().get(0).getAddress(),
         };
         assertThat(rsl, is(expected));
 
