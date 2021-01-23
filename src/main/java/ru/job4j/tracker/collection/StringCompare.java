@@ -10,10 +10,9 @@ public class StringCompare implements Comparator<String> {
         char[] chRight = right.toCharArray();
         int count = Math.min(chLeft.length, chRight.length);
         for (int i = 0; i < count; i++) {
-            if (chLeft[i] == chRight[i]) {
-                continue;
+            if (chLeft[i] != chRight[i]) {
+                return chLeft[i] - chRight[i];
             }
-            return chLeft[i] > chRight[i] ? 1 : -1;
         }
         if (chLeft.length != chRight.length) {
             return chLeft.length > chRight.length ? 1 : -1;
