@@ -5,7 +5,6 @@ import java.util.Comparator;
 public class StringCompare implements Comparator<String> {
     @Override
     public int compare(String left, String right) {
-        int rsl = 0;
         char[] chLeft = left.toCharArray();
         char[] chRight = right.toCharArray();
         int count = Math.min(chLeft.length, chRight.length);
@@ -14,9 +13,6 @@ public class StringCompare implements Comparator<String> {
                 return chLeft[i] - chRight[i];
             }
         }
-        if (chLeft.length != chRight.length) {
-            return chLeft.length > chRight.length ? 1 : -1;
-        }
-        return rsl;
+        return chLeft.length - chRight.length;
     }
 }
