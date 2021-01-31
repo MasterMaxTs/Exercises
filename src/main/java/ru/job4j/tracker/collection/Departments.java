@@ -25,8 +25,6 @@ public class Departments {
         orgs.sort(new DepDescComp());
     }
 
-
-
     public static void showDep(List<String> orgs) {
         for (String value :
                 orgs) {
