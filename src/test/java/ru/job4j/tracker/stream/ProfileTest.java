@@ -18,10 +18,18 @@ public class ProfileTest {
         Address address1 = new Address("Russia", "Krasnaya", 154, 65);
         profile1.setAddress(address1);
         Profile profile2 = new Profile();
-        Address address2 = new Address("Ukrane", "Komsomolskaya", 34, 5);
+        Address address2 = new Address("Ukraine", "Komsomolskaya", 34, 5);
         profile2.setAddress(address2);
+        Profile profile3 = new Profile();
+        Address address3 = new Address("Russia", "Krasnaya", 154, 65);
+        profile3.setAddress(address3);
+        Profile profile4 = new Profile();
+        Address address4 = new Address("Kazakhstan", "Zhloby", 4, 90);
+        profile4.setAddress(address4);
         profiles.add(profile1);
         profiles.add(profile2);
+        profiles.add(profile3);
+        profiles.add(profile4);
     }
 
     @Test
@@ -30,5 +38,13 @@ public class ProfileTest {
         List<Address> rsl = pr.collect(profiles);
         assertThat(rsl.get(0).getCity(), is("Russia"));
         assertThat(rsl.get(1).getHome(), is(34));
+    }
+
+    @Test
+    public void whenGetAddressWithoutDuplicateAndSorted() {
+        Profile pr = new Profile();
+        List<Address> rsl = pr.newCollect(profiles);
+        assertThat(rsl.size(), is(3));
+        assertThat(rsl.get(0).getCity(), is("Kazakhstan"));
     }
 }
