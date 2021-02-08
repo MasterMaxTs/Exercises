@@ -40,10 +40,8 @@ public class SchoolTest {
     @Test
     public void whenCollectClassB() {
         School sc = new School();
-        Predicate<Student> first = s -> s.getScore() >= 50;
-        Predicate<Student> second = s -> s.getScore() < 70;
-        Predicate<Student> combine = first.and(second);
-        List<Student> rsl = sc.collect(students, combine);
+        List<Student> rsl = sc.collect(students, s -> s.getScore() >= 50
+                                        && s.getScore() < 70);
         List<Student> expected = new ArrayList<>();
         expected.add(new Student(50, "Surname5"));
         expected.add(new Student(60, "Surname6"));
