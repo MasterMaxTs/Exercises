@@ -8,7 +8,8 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class School {
-    public List<Student> collect(List<Student> students, Predicate<Student> predicate) {
+    public List<Student> collect(List<Student> students,
+                                        Predicate<Student> predicate) {
          return  students.stream()
                  .filter(predicate)
                  .collect(Collectors.toList());
@@ -17,9 +18,8 @@ public class School {
     public Map<String, List<Student>> getSchoolClass(List<Student> students) {
         Map<String, List<Student>> map = new HashMap<>();
         map.put("10A", collect(students, s -> s.getScore() >= 70));
-        Predicate<Student> first = s -> s.getScore() >= 50;
-        Predicate<Student> second = s -> s.getScore() < 70;
-        map.put("10B", collect(students, first.and(second)));
+        map.put("10B", collect(students, s -> s.getScore() >= 50
+                                && s.getScore() < 70));
         map.put("10C", collect(students, s -> s.getScore() < 50));
         return map;
     }
