@@ -26,9 +26,9 @@ public class SchoolTest {
     }
 
     @Test
-    public void whenCollectClassA() {
+    public void whenCollectClass10A() {
         School sc = new School();
-        List<Student> rsl = sc.collect(students, s -> s.getScore() >= 70);
+        List<Student> rsl = sc.sortedClass(students, s -> s.getScore() >= 70);
         List<Student> expected = new ArrayList<>();
         expected.add(new Student(70, "Surname7"));
         expected.add(new Student(80, "Surname8"));
@@ -37,9 +37,9 @@ public class SchoolTest {
     }
 
     @Test
-    public void whenCollectClassB() {
+    public void whenCollectClass10B() {
         School sc = new School();
-        List<Student> rsl = sc.collect(students, s -> s.getScore() >= 50
+        List<Student> rsl = sc.sortedClass(students, s -> s.getScore() >= 50
                                         && s.getScore() < 70);
         List<Student> expected = new ArrayList<>();
         expected.add(new Student(50, "Surname5"));
@@ -48,9 +48,9 @@ public class SchoolTest {
     }
 
     @Test
-    public void whenCollectClassC() {
+    public void whenCollectClass10C() {
         School sc = new School();
-        List<Student> rsl = sc.collect(students, s -> s.getScore() < 50);
+        List<Student> rsl = sc.sortedClass(students, s -> s.getScore() < 50);
         List<Student> expected = new ArrayList<>();
         expected.add(new Student(10, "Surname1"));
         expected.add(new Student(20, "Surname2"));
@@ -58,4 +58,22 @@ public class SchoolTest {
         expected.add(new Student(40, "Surname4"));
         assertThat(rsl, is(expected));
     }
+
+    @Test
+    public void whenGet10bClassFromMap() {
+        School sc = new School();
+        List<Student> rsl = sc.getSchoolClass(students, "10B");
+        List<Student> expected = new ArrayList<>();
+        expected.add(new Student(50, "Surname5"));
+        expected.add(new Student(60, "Surname6"));
+        assertThat(rsl, is(expected));
+    }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void whenIncorrectNameClassInput() {
+        School sc = new School();
+        List<Student> rsl = sc.getSchoolClass(students, "10D");
+    }
+
+
 }
