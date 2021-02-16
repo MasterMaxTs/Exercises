@@ -13,6 +13,8 @@ public class Cards {
         this.value = value;
     }
 
+    public Cards() {}
+
     public List<Cards> generateCards() {
          return Stream.of(Suit.values())
                       .flatMap(suit -> Stream.of(Value.values())
@@ -29,7 +31,7 @@ public class Cards {
     }
 
     public static void main(String[] args) {
-        Cards cards = new Cards(Suit.CLUBS, Value.V_8);
+        Cards cards = new Cards();
         cards.generateCards().forEach(System.out::println);
     }
 }
