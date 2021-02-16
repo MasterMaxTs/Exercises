@@ -2,7 +2,6 @@ package ru.job4j.tracker.collection;
 
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,8 +12,7 @@ public class OrderConvertTest {
 
     @Test
     public void process() {
-        List<Order> order = new ArrayList<>();
-        order.add(new Order("0001", "Zenbook"));
+        List<Order> order = List.of(new Order("0001", "Zenbook"));
         HashMap<String, Order> map = OrderConvert.process(order);
         assertThat(map.get("0001"), is(new Order("0001", "Zenbook")));
     }
