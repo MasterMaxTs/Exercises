@@ -9,9 +9,9 @@ public class PhoneDictionaryTest {
 
     @Test
     public void whenAdd() {
-        Person person = new Person("Max", "Tsurkanov",
+        var person = new Person("Max", "Tsurkanov",
                 "+786121", "Krasnodar");
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(person);
         String[] expected = {person.getName(),
                              person.getSurname(),
@@ -29,17 +29,16 @@ public class PhoneDictionaryTest {
 
     @Test
     public void whenFindByNameIsSer() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(new Person("Igor", "Ivanov", "6616161", "Moscow"));
         phones.add(new Person("Sergey", "Petrov", "2178364", "Kursk"));
         ArrayList<Person> findPerson = phones.find("Ser");
         assertThat(findPerson.get(0).getSurname(), is("Petrov"));
-
     }
 
     @Test
     public void whenFindByPhoneIs632() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(new Person("Igor", "Ivanov", "6326161", "Moscow"));
         phones.add(new Person("Sergey", "Petrov", "63283264", "Kursk"));
         ArrayList<Person> person = phones.find("632");
