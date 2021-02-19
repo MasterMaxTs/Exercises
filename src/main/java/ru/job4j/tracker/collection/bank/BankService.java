@@ -1,9 +1,7 @@
 package ru.job4j.tracker.collection.bank;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Stream;
 
 /**
  *Класс описывает модель банковской системы.
@@ -45,14 +43,10 @@ public class BankService {
      * Если такого пользователя не нашлось, возвращается null.
      */
     public Optional<User> findByPassport(String passport) {
-        Optional<User> rsl = Optional.empty();
-        for (User user
-                : users.keySet()) {
-            if (user.getPassport().equals(passport)) {
-                return Optional.of(user);
-            }
-        }
-        return rsl;
+        Set<User> setUsers = users.keySet();
+        return setUsers.stream()
+                       .filter(u -> u.getPassport().equals(passport))
+                       .findFirst();
     }
 
     /**
@@ -76,18 +70,14 @@ public class BankService {
      * в противоположном случае
      */
     public Optional<Account> findByRequisite(String passport, String requisite) {
-        Optional<Account> rsl = Optional.empty();
         Optional<User> user = findByPassport(passport);
         if (user.isPresent()) {
             List<Account> userAccounts = users.get(user.get());
-            for (Account value
-                    : userAccounts) {
-                if (value.getRequisite().equals(requisite)) {
-                    return Optional.of(value);
-                }
-            }
+            return userAccounts.stream()
+                               .filter(a -> a.getRequisite().equals(requisite))
+                               .findFirst();
         }
-        return rsl;
+        return Optional.empty();
     }
 
     /**
