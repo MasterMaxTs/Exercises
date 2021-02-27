@@ -7,12 +7,12 @@ public class MostUsedCharacter {
         char rsl = ' ';
         String strLowerCase = str.toLowerCase();
         String[] strArr = strLowerCase.split(" ");
-        String resultStr = "";
+        StringBuilder resultStr = new StringBuilder();
         for (String value :
                 strArr) {
-            resultStr += value;
+            resultStr.append(value);
         }
-        char[] charArr = resultStr.toCharArray();
+        char[] charArr = resultStr.toString().toCharArray();
         Map<Character, Integer> map = new TreeMap<>();
         for (Character ch :
                 charArr) {
