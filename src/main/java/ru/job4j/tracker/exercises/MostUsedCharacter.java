@@ -16,8 +16,8 @@ public class MostUsedCharacter {
         Map<Character, Integer> map = new TreeMap<>();
         for (Character ch :
                 charArr) {
-            map.computeIfAbsent(ch, value -> 1);
             map.computeIfPresent(ch, (k, v) -> v + 1);
+            map.computeIfAbsent(ch, value -> 1);
         }
         Collection<Integer> col = map.values();
         int max = Collections.max(col);

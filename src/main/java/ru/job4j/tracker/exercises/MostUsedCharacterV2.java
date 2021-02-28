@@ -16,8 +16,8 @@ public class MostUsedCharacterV2 {
         Map<Character, Integer> map = new HashMap<>();
         for (Character ch :
                 charArr) {
-            map.computeIfAbsent(ch, value -> 1);
             map.computeIfPresent(ch, (k, v) -> v + 1);
+            map.computeIfAbsent(ch, value -> 1);
         }
         Map<Integer, Character> sortedMap = new TreeMap<>();
         for (Map.Entry entry : map.entrySet()) {
@@ -43,5 +43,9 @@ public class MostUsedCharacterV2 {
                 + "Когда же черт возьмет тебя";
         System.out.println("Часто используемый символ = " + "\""
                                                           +getMaxCount(str) + "\"");
+        str = "Мама мыла раму";
+        System.out.println("Часто используемый символ = " + "\""
+                +getMaxCount(str) + "\"");
+
     }
 }
