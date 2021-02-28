@@ -5,19 +5,14 @@ import java.util.*;
 public class MostUsedCharacter {
     public static char getMaxCount(String str) {
         char rsl = ' ';
-        String strLowerCase = str.toLowerCase();
-        String[] strArr = strLowerCase.split(" ");
-        StringBuilder resultStr = new StringBuilder();
-        for (String value :
-                strArr) {
-            resultStr.append(value);
-        }
-        char[] charArr = resultStr.toString().toCharArray();
+        /*Приводим строку к нижнему регистру и удаляем пробелы*/
+        String resultStr = str.toLowerCase().replaceAll("\\s", "");
+        char[] charArr = resultStr.toCharArray();
         Map<Character, Integer> map = new TreeMap<>();
         for (Character ch :
                 charArr) {
             map.computeIfPresent(ch, (k, v) -> v + 1);
-            map.computeIfAbsent(ch, value -> 1);
+            map.computeIfAbsent(ch, v -> 1);
         }
         Collection<Integer> col = map.values();
         int max = Collections.max(col);
