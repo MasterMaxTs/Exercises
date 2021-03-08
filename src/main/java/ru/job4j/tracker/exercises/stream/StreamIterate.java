@@ -1,5 +1,6 @@
 package ru.job4j.tracker.exercises.stream;
 
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamIterate {
@@ -10,6 +11,16 @@ public class StreamIterate {
     public static void showArray (Integer[] data) {
         Stream.iterate(0, i -> i < data.length, i -> i + 2)
                 .forEach(index -> System.out.print(data[index]));
+    }
+
+    /**
+     * Метод создает стрим из примитивов в диапазоне заданных значений
+     * @param start начальное значение диапазона
+     * @param end конечное значение диапазона включительно
+     * @return возращает стрим целочисленных значений
+     */
+    public static IntStream createStream (int start, int end) {
+        return IntStream.rangeClosed(start, end);
     }
 
     public static void main(String[] args) {
