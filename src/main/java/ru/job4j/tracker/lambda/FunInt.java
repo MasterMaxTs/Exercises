@@ -6,8 +6,8 @@ import java.util.Comparator;
 public class FunInt {
     public static void showInfo(Attachment[] atts) {
         System.out.println();
-        for (Attachment att :
-                atts) {
+        for (Attachment att
+                : atts) {
             System.out.println(att);
         }
         System.out.println();

@@ -10,7 +10,7 @@ public class ReductionWithTwoArguments {
      * @return возвращает сумму всех элементов списка,
      * помноженную на 5
      */
-    public static Integer collect (List<Integer> list) {
+    public static Integer collect(List<Integer> list) {
         return list.stream()
                     .reduce(5, (f, s) -> f * s);
 

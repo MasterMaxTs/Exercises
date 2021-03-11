@@ -9,7 +9,7 @@ public class FlatMapForObject {
      * @param lists вложенный список
      * @return возвращает список всех элементов
      */
-    public static List<Integer> flatMap (List<List<Integer>> lists) {
+    public static List<Integer> flatMap(List<List<Integer>> lists) {
         return lists.stream()
                 .flatMap(sl -> sl.stream())
                 .collect(Collectors.toList());

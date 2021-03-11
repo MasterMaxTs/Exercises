@@ -8,8 +8,8 @@ import java.util.Objects;
 public class Merge {
     public static Map<Integer, String> collectData(Map<Integer, String> names, List<User> users) {
         Map<Integer, String> map = new HashMap<>(names);
-        for (User user :
-                users) {
+        for (User user
+                : users) {
             map.putIfAbsent(user.getId(), user.getName());
             map.merge(user.getId(), user.getSurname(), (oldV, newV) -> oldV + " " + newV);
         }
@@ -41,8 +41,12 @@ public class Merge {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             User user = (User) o;
             return id == user.id;
         }

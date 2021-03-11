@@ -8,8 +8,8 @@ import java.util.Objects;
 public class PutContainsKey {
     public static Map<Integer, User> addNewElementWithoutCheck(List<User> list) {
         Map<Integer, User> rsl = new HashMap<>();
-        for (User user :
-                list) {
+        for (User user
+                : list) {
             rsl.put(user.getId(), user);
         }
         return rsl;
@@ -17,8 +17,8 @@ public class PutContainsKey {
 
     public static Map<Integer, User> addNewElementWithCheck(List<User> list) {
         Map<Integer, User> rsl = new HashMap<>();
-        for (User user :
-                list) {
+        for (User user
+                : list) {
             if (!rsl.containsKey(user.getId())) {
                 rsl.put(user.getId(), user);
             }
@@ -41,8 +41,12 @@ public class PutContainsKey {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             User user = (User) o;
             return id == user.id;
         }
@@ -54,10 +58,11 @@ public class PutContainsKey {
 
         @Override
         public String toString() {
-            return "User{" +
-                    "id=" + id +
-                    ", name='" + name + '\'' +
-                    '}';
+            return "User{"
+                    + "id=" + id
+                    + ", name='" + name
+                    + '\''
+                    + '}';
         }
     }
 }

@@ -7,7 +7,7 @@ public class MRPredicate {
      * Метод проверяет, что строка пустая
      * @return ссылку на метод isEmpty класса String
      */
-    public static Predicate<String> predicate () {
+    public static Predicate<String> predicate() {
         return String::isEmpty;
     }
 }

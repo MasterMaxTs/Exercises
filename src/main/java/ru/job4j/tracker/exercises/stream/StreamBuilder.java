@@ -12,7 +12,7 @@ public class StreamBuilder {
      * @return возвращает стрим из первого и последнего элемента
      * во входящем массиве
      */
-    public static Stream<Object> createStream (Integer[] data) {
+    public static Stream<Object> createStream(Integer[] data) {
         return Stream
                 .builder()
                 .add(data[0])

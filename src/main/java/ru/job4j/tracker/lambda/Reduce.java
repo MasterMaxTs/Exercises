@@ -41,7 +41,9 @@ public class Reduce {
     /**
      * Универсальный метод для вычисления суммы и произведения чисел от 1 до to
      */
-    private static int loop(int to, BiFunction<Integer, Integer, Integer> func, Supplier<Integer> initValue) {
+    private static int loop(int to,
+                            BiFunction<Integer, Integer, Integer> func,
+                            Supplier<Integer> initValue) {
         int rsl = initValue.get();
         for (int i = 1; i <= rsl; i++) {
             rsl = func.apply(i, rsl);

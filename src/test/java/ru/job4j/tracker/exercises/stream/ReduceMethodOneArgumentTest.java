@@ -20,7 +20,7 @@ public class ReduceMethodOneArgumentTest {
     }
 
     @Test
-    public void WhenEmptyListThenNegative() {
+    public void whenEmptyListThenNegative() {
         assertEquals(Integer.valueOf(-1), ReduceMethodOneArgument.reduce(List.of()));
     }
 }

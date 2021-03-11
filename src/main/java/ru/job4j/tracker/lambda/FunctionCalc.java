@@ -6,10 +6,13 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class FunctionCalc {
-    public List<Double> diapason(int start, int end, int numberOfSteps ,Function<Double, Double> func) {
+    public List<Double> diapason(int start,
+                                 int end,
+                                 int numberOfSteps,
+                                 Function<Double, Double> func) {
         List<Double> result = new ArrayList<>();
         double delta = (double) (end - start) / numberOfSteps;
-        for (int i = 0; i < numberOfSteps ; i++) {
+        for (int i = 0; i < numberOfSteps; i++) {
             double rsl = func.apply(start + delta * i);
             result.add(rsl);
         }

@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class IntegerList {
     public static void main(String[] args) {
         ArrayList<Integer> digits = new ArrayList<>();
-        for (int i = -3; i < 4 ; i++) {
+        for (int i = -3; i < 4; i++) {
             digits.add(i);
         }
         digits.forEach(System.out::print);

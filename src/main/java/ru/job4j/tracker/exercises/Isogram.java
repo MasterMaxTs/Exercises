@@ -13,8 +13,8 @@ public class Isogram {
 
     public static void main(String[] args) {
         String s = "uncopyrightables";
-        System.out.println("Is string \'" + s +"\' does isogram?\n" + checkString(s));
+        System.out.println("Is string \'" + s + "\' does isogram?\n" + checkString(s));
         s = "javascript";
-        System.out.println("Is string \'" + s +"\' does isogram?\n" + checkString(s));
+        System.out.println("Is string \'" + s + "\' does isogram?\n" + checkString(s));
     }
 }

@@ -13,7 +13,7 @@ public class Cards {
         this.value = value;
     }
 
-    public Cards() {}
+    public Cards() { }
 
     public List<Cards> generateCards() {
          return Stream.of(Suit.values())
@@ -24,10 +24,10 @@ public class Cards {
 
     @Override
     public String toString() {
-        return "Cards{" +
-                "suit=" + suit +
-                ", value=" + value +
-                '}';
+        return "Cards{"
+                + "suit=" + suit
+                + ", value=" + value
+                + '}';
     }
 
     public static void main(String[] args) {

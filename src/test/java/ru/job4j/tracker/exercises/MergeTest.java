@@ -14,7 +14,7 @@ public class MergeTest {
 
     @Test
     public void collectData() {
-        Map<Integer,String> names = new HashMap<>(Map.of(1, "Name1", 2, "Name2"));
+        Map<Integer, String> names = new HashMap<>(Map.of(1, "Name1", 2, "Name2"));
         List<User> users = List.of(
                 new User(1, "Name1", "Surname1"),
                 new User(2, "Name2", "Surname2"),

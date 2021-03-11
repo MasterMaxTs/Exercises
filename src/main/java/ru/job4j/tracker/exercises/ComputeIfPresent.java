@@ -7,8 +7,8 @@ public class ComputeIfPresent {
     public static Map<Integer, String> collectData(
             Map<Integer, String> name, Map<Integer, String> surname) {
         Map<Integer, String> rsl = new HashMap<>(name);
-        for (Integer key :
-                surname.keySet()) {
+        for (Integer key
+                : surname.keySet()) {
             rsl.computeIfPresent(key, (k, value) -> value + " " + surname.get(k));
         }
         return rsl;

@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class College {
-    Map<Student, Set<Subject>> students;
+    private Map<Student, Set<Subject>> students;
 
     public College(Map<Student, Set<Subject>> students) {
         this.students = students;

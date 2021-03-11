@@ -17,7 +17,7 @@ public class SearchAttTest {
                 new Attachment("fail", 120),
                 new Attachment("done", 105)
         );
-        List<Attachment> expected = Arrays.asList( in.get(1), in.get(2));
+        List<Attachment> expected = Arrays.asList(in.get(1), in.get(2));
         List<Attachment> rsl = SearchAtt.filterSize(in);
         assertThat(rsl, is(expected));
     }
@@ -30,7 +30,7 @@ public class SearchAttTest {
                 new Attachment("done", 105),
                 new Attachment("bugFixed", 200)
         );
-        List<Attachment> expected = Arrays.asList( in.get(0), in.get(3));
+        List<Attachment> expected = Arrays.asList(in.get(0), in.get(3));
         List<Attachment> rsl = SearchAtt.filterName(in);
         assertThat(rsl, is(expected));
     }

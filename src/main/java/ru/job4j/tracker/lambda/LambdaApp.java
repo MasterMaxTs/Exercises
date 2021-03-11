@@ -24,8 +24,8 @@ public class LambdaApp {
                 new LambdaApp().getInputUserInfo(),
                 new LambdaApp().getInputUserInfo()
         );
-        for (LambdaUser user :
-                users) {
+        for (LambdaUser user
+                : users) {
             System.out.println(user);
         }
     }

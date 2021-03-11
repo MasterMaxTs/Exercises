@@ -25,8 +25,8 @@ public class NumbersSort {
     }
 
     public static void showInfo(String[] array) {
-        for (String s :
-                array) {
+        for (String s
+                : array) {
             System.out.println(s);
         }
         System.out.println();

@@ -10,8 +10,8 @@ public class Article {
         String[] originArr = originFormat.split(" ");
         Set<String> hs = new HashSet<>(Arrays.asList(originArr));
         String[] lineArr = line.split(" ");
-        for (String str :
-                lineArr) {
+        for (String str
+                : lineArr) {
             if (!hs.contains(str)) {
                 return false;
             }

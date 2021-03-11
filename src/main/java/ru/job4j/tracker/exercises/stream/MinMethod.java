@@ -11,7 +11,7 @@ public class MinMethod {
      * @return возвращает минимальную длину строки иначе выкидывает
      * NoSuchElementException (default), если входящий список пуст
      */
-    public static String min (List<String> list) {
+    public static String min(List<String> list) {
         return list.stream()
                     .min(Comparator.comparingInt(String::length))
                     .orElseThrow();

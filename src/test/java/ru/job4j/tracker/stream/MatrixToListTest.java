@@ -19,7 +19,7 @@ public class MatrixToListTest {
         };
         MatrixToList mtl = new MatrixToList();
         List<Integer> rsl = mtl.listFromMatrix(inputMatrix);
-        assertThat(rsl, is(Arrays.asList(1, 2, 3, 4, 5, 6 ,7 ,8 ,9)));
+        assertThat(rsl, is(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9)));
 
     }
 }

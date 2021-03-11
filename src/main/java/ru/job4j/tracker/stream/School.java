@@ -6,20 +6,20 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class School {
-    final String A = "10A";
-    final String B = "10B";
-    final String C = "10C";
+    private final String a = "10A";
+    private final String b = "10B";
+    private final String c = "10C";
 
     public List<Student> getSchoolClass(List<Student> students,
                                         String className) {
         Map<String, List<Student>> map = new HashMap<>();
-        map.put(A, sortedClass(students, s -> s.getScore() >= 70));
-        map.put(B, sortedClass(students, s -> s.getScore() >= 50
+        map.put(a, sortedClass(students, s -> s.getScore() >= 70));
+        map.put(b, sortedClass(students, s -> s.getScore() >= 50
                                 && s.getScore() < 70));
-        map.put(C, sortedClass(students, s -> s.getScore() < 50));
-        if (!className.equalsIgnoreCase(A)
-                && (!className.equalsIgnoreCase(B)
-                    && (!className.equalsIgnoreCase(C)))) {
+        map.put(c, sortedClass(students, s -> s.getScore() < 50));
+        if (!className.equalsIgnoreCase(a)
+                && (!className.equalsIgnoreCase(b)
+                    && (!className.equalsIgnoreCase(c)))) {
                         throw new IllegalArgumentException("Incorrect class name!");
         }
 
@@ -48,13 +48,13 @@ public class School {
         students.add(new Student(80, "Surname8"));
         students.add(new Student(90, "Surname9"));
         List<Student> students10A = sc.getSchoolClass(students, "10A");
-        System.out.println("========= " + sc.A + " ==========");
+        System.out.println("========= " + sc.a + " ==========");
         students10A.forEach(System.out::println);
         List<Student> students10B = sc.getSchoolClass(students, "10B");
-        System.out.println("========= " + sc.B + " ==========");
+        System.out.println("========= " + sc.b + " ==========");
         students10B.forEach(System.out::println);
         List<Student> students10C = sc.getSchoolClass(students, "10C");
-        System.out.println("========= " + sc.C + " ==========");
+        System.out.println("========= " + sc.c + " ==========");
         students10C.forEach(System.out::println);
         List<Student> students10D = sc.getSchoolClass(students, "10D");
     }

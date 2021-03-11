@@ -8,7 +8,7 @@ public class ConsumerAndThen {
      * @param input строка, которая будет печататься в консоли
      * @return возращает объект типа совмещенный Consumer
      */
-    public static Consumer<String> consumer (String input) {
+    public static Consumer<String> consumer(String input) {
         Consumer<String> print = s -> System.out.print(input);
         Consumer<String> ln = l -> System.out.println();
         return print.andThen(ln);

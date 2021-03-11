@@ -4,15 +4,15 @@ import java.util.Map;
 import java.util.Set;
 
 public class College {
-    public final Map<Student, Set<Subject>> students;
+    private final Map<Student, Set<Subject>> students;
 
     public College(Map<Student, Set<Subject>> students) {
         this.students = students;
     }
 
     public Student findByAccount(String account) {
-        for (Student s :
-                students.keySet()) {
+        for (Student s
+                : students.keySet()) {
             if (account.equals(s.getAccount())) {
                 return s;
             }
@@ -24,8 +24,8 @@ public class College {
         Student s = findByAccount(account);
         if (s != null) {
             Set<Subject> subjects = students.get(s);
-            for (Subject sbj :
-                    subjects) {
+            for (Subject sbj
+                    : subjects) {
                 if (name.equals(sbj.getName())) {
                     return sbj;
                 }

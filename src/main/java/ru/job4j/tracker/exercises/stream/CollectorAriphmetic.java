@@ -19,9 +19,9 @@ public class CollectorAriphmetic {
      * @param list на входе лист int чисел
      * @return возвращает int произведение всех элементов в листе
      */
-    public static Integer collect (List<Integer> list) {
+    public static Integer collect(List<Integer> list) {
         /*Создаем хранилище*/
-        Supplier<List<Integer>> supplier = LinkedList::new;             // () -> {return new LinkedList();}
+        Supplier<List<Integer>> supplier = LinkedList::new;
         /*Указываем, как добавлять в хранилище элементы*/
         BiConsumer<List<Integer>, Integer> biConsumer = List::add;      // (f, s) -> f.add(s);
         /*Совмещаем результаты параллельных вычислений*/
@@ -32,8 +32,8 @@ public class CollectorAriphmetic {
         /*Задаем функцию, которая обработает каждое значение списка после сборки*/
         Function<List<Integer>, Integer> function = ns -> {
             int comp = 1;
-            for (Integer i :
-                    ns) {
+            for (Integer i
+                    : ns) {
                 comp *= i;
             }
             return comp;

@@ -5,11 +5,11 @@ import java.util.*;
 public class Departments {
     public static List<String> fillGaps(List<String> deps) {
         Set<String> tmp = new LinkedHashSet<>();
-        for (String value :
-                deps) {
+        for (String value
+                : deps) {
             String start = "";
-            for (String el :
-                    value.split("/")) {
+            for (String el
+                    : value.split("/")) {
                 start = start.equals("") ? el : start + "/" + el;
                 tmp.add(start);
             }
@@ -26,8 +26,8 @@ public class Departments {
     }
 
     public static void showDep(List<String> orgs) {
-        for (String value :
-                orgs) {
+        for (String value
+                : orgs) {
             System.out.println(value);
         }
         System.out.println("*****************************************************************");

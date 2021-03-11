@@ -74,6 +74,4 @@ public class SchoolTest {
         School sc = new School();
         List<Student> rsl = sc.getSchoolClass(students, "10D");
     }
-
-
 }

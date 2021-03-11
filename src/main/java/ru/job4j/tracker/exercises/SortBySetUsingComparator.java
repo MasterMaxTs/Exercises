@@ -5,14 +5,13 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-
 public class SortBySetUsingComparator {
     /**
      * Метод позволяет получать отсортированное множество
      * строк в лексографическом порядке по убыванию
      * @ param на вход подается list строк
      * */
-    public static Set<String> sort (List<String> list) {
+    public static Set<String> sort(List<String> list) {
         Set<String> sortedSet = new TreeSet<>(Comparator.reverseOrder());
         sortedSet.addAll(list);
         return sortedSet;

@@ -10,7 +10,7 @@ public class DistinctForPrimitive {
      * @param data массив чисел на входе
      * @return возвращает список уникальных чисел
      */
-    public static List<Integer> collect (int[] data) {
+    public static List<Integer> collect(int[] data) {
         return Arrays.stream(data)
                 .distinct()
                 .boxed()

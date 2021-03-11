@@ -12,8 +12,8 @@ public class GeomProgress {
             list.add(first * (int) Math.pow(denominator, i - 1));
             sum += list.get(i - 1);
         }
-        for (int value :
-                list) {
+        for (int value
+                : list) {
             System.out.print(value + " ");
         }
 

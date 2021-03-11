@@ -10,12 +10,12 @@ public class RemoveElements {
                                                      List<Integer> ids, 
                                                      List<User> users) {
         Map<Integer, String> map = new HashMap<>(data);
-        for (Integer i :
-                ids) {
+        for (Integer i
+                : ids) {
             map.remove(i);
         }
-        for (User user :
-                users) {
+        for (User user
+                : users) {
             map.remove(user.getId(), user.getName());
         }
         return map;
@@ -40,8 +40,12 @@ public class RemoveElements {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             User user = (User) o;
             return id == user.id && Objects.equals(name, user.name);
         }

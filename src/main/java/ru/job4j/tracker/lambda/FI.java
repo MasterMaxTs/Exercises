@@ -5,12 +5,13 @@ import java.util.Comparator;
 
 public class FI {
     public void showInfo(Attachment[] att) {
-        for (Attachment val :
-                att) {
+        for (Attachment val
+                : att) {
             System.out.println(val);
         }
         System.out.println();
     }
+
     public static void main(String[] args) {
         Attachment[] attachments = {
                 new Attachment("imageOne", 200),

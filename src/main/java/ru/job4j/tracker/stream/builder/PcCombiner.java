@@ -84,29 +84,33 @@ public class PcCombiner {
 
     @Override
     public String toString() {
-        return
-                "motherBoard='" + motherBoard + '\'' +
-                "\ncpu='" + cpu + '\'' +
-                "\ncore=" + core +
-                "\nfrequencyCore=" + frequencyCore +
-                "\ngpu='" + gpu + '\'' +
-                "\nmemoryBusGpu=" + memoryBusGpu +
-                "\nram='" + ram + '\'' +
-                "\nfrequencyRam=" + frequencyRam +
-                "\ntotalRam=" + totalRam +
-                "\n";
+        return "motherBoard='"
+                + motherBoard
+                + '\''
+                + "\ncpu='" + cpu
+                + '\''
+                + "\ncore=" + core
+                + "\nfrequencyCore=" + frequencyCore
+                + "\ngpu='" + gpu
+                + '\''
+                + "\nmemoryBusGpu=" + memoryBusGpu
+                + "\nram='" + ram
+                + '\''
+                + "\nfrequencyRam=" + frequencyRam
+                + "\ntotalRam=" + totalRam
+                + "\n";
     }
 
     public static void main(String[] args) {
         PcCombiner pc1 = new Builder().buildNameMotherBoard("Gigabyte B450M")
-                .buildNameCpu(" Intel® Core™ i5-7300HQ")
-                .buildNameGpu("AMD RADEON RX 590")
-                .buildNameRam("Crucial 32GB DDR4-2666 SODIMM")
-                .build();
+                                        .buildNameCpu(" Intel® Core™ i5-7300HQ")
+                                        .buildNameGpu("AMD RADEON RX 590")
+                                        .buildNameRam("Crucial 32GB DDR4-2666 SODIMM")
+                                        .build();
         System.out.println("PC combine with minimum info\n" + pc1);
         PcCombiner pc2 = new Builder().buildNameMotherBoard("Gigabyte B450M")
                 .buildNameCpu(" Intel® Core™ i5-7300HQ")
-                .buildQuantityCore((byte)4)
+                .buildQuantityCore((byte) 4)
                 .buildFrequencyCore(2500000000L)
                 .buildNameGpu("AMD RADEON RX 590")
                 .buildMemoryBusGpu((short) 256)

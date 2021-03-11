@@ -25,7 +25,7 @@ public class OptionalOrElseThrow {
          * UserNotFoundException, если пользователь не найден
          * по запрошенному логину
          */
-        public static User orElseThrow (List<User> list, String login) {
+        public static User orElseThrow(List<User> list, String login) {
             return search(list, login).orElseThrow(UserNotFoundException::new);
         }
 
@@ -37,8 +37,8 @@ public class OptionalOrElseThrow {
          */
         private static Optional<User> search(List<User> list, String login) {
             Optional<User> user = Optional.empty();
-            for (User u :
-                    list) {
+            for (User u
+                    : list) {
                 if (u.getLogin().equals(login)) {
                     return Optional.of(u);
                 }

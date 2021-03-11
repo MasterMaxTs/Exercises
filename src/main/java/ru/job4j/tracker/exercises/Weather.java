@@ -5,17 +5,17 @@ import java.util.*;
 public class Weather {
     public static List<Info> editData(List<Info> list) {
         Map<String, List<Integer>> map = new HashMap<>();
-        for (Info info :
-                list) {
+        for (Info info
+                : list) {
             map.putIfAbsent(info.getCity(), new ArrayList<>());
             map.get(info.getCity()).add(info.getRainfall());
         }
         List<Info> infoList = new ArrayList<>();
-        for (String city :
-                map.keySet()) {
+        for (String city
+                : map.keySet()) {
             int sum = 0;
-            for (Integer i :
-                    map.get(city)) {
+            for (Integer i
+                    : map.get(city)) {
                 sum += i;
             }
             infoList.add(new Info(city, sum));
@@ -23,6 +23,7 @@ public class Weather {
         return infoList;
 
     }
+
     public static class Info {
         private String city;
 
@@ -50,8 +51,8 @@ public class Weather {
                 return false;
             }
             Info info = (Info) o;
-            return rainfall == info.rainfall &&
-                    Objects.equals(city, info.city);
+            return rainfall == info.rainfall
+                    && Objects.equals(city, info.city);
         }
 
         @Override

@@ -8,11 +8,11 @@ import java.util.Objects;
 public class ComputeIfAbsent {
     public static Map<Integer, String> collectData(Map<Integer, String> names, List<User> users) {
         Map<Integer, String> rsl = new HashMap<>(names);
-        for (User user :
-                users) {
+        for (User user
+                : users) {
             int id = user.getId();
             rsl.computeIfPresent(id, (k, v) -> v + users.get(k - 1).getName());
-            rsl.computeIfAbsent(id, value-> users.get(id - 1).getName());
+            rsl.computeIfAbsent(id, value -> users.get(id - 1).getName());
         }
         return rsl;
     }
@@ -36,8 +36,12 @@ public class ComputeIfAbsent {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
             ComputeIfAbsent.User user = (ComputeIfAbsent.User) o;
             return Objects.equals(name, user.name);
         }

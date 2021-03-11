@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 import java.util.stream.Collector;
 
 public class CollectorClass {
-    public static List<Integer> collect (List<Integer> list) {
+    public static List<Integer> collect(List<Integer> list) {
         Supplier<List<Integer>> supplier = LinkedList::new;
         BiConsumer<List<Integer>, Integer> biConsumer = List::add;
         BinaryOperator<List<Integer>> operator = (left, right) -> {

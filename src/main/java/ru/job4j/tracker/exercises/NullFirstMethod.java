@@ -13,7 +13,6 @@ public class NullFirstMethod {
         return Comparator.nullsLast(Comparator.naturalOrder());
     }
 
-
     public static void main(String[] args) {
         List<String> list = Arrays.asList("c", "a", null, "b");
         list.sort(nullFirst());

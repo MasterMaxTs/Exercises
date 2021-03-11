@@ -9,7 +9,8 @@ import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 public class ListToMapTest {
-    List<Student> students = new ArrayList<>();
+    private List<Student> students = new ArrayList<>();
+
     @Before
     public void setUp() {
         students.add(new Student(75, "Ivanov"));
