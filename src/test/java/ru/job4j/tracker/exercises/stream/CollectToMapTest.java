@@ -17,4 +17,12 @@ public class CollectToMapTest {
         Map<Integer, Integer> rsl = CollectToMap.collect(data);
         assertEquals(expect, rsl);
     }
+
+    @Test
+    public void collectWhenDuplicate() {
+        Stream<Integer> data = List.of(2, 3, 4, 2).stream();
+        Map<Integer, Integer> expect = Map.of(2, 4, 3, 9, 4, 16);
+        Map<Integer, Integer> rsl = CollectToMap.collectWhenDuplicate(data);
+        assertEquals(expect, rsl);
+    }
 }

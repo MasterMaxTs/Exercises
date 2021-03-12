@@ -10,7 +10,17 @@ public class CollectToMap {
      * @param data входящий поток элементов класса Integer
      * @return возращает Map по правилу: значение равно квадрату ключа
      */
-    public static Map<Integer, Integer> collect (Stream<Integer> data) {
+    public static Map<Integer, Integer> collect(Stream<Integer> data) {
         return data.collect(Collectors.toMap(k -> k, v -> v * v));
+    }
+
+    /**
+     * Метод из входящего потока, в котором могут быть дубликаты значений,
+     * собирает Map
+     * @param data входящий поток элементов класса Integer
+     * @return озращает Map по правилу: значение равно квадрату ключа
+     */
+    public static Map<Integer, Integer> collectWhenDuplicate(Stream<Integer> data) {
+        return data.collect(Collectors.toMap(k -> k, v -> v * v, (prev, curr) -> prev));
     }
 }
