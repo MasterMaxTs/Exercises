@@ -17,4 +17,12 @@ public class TerminalForPrimitiveTest {
         assertEquals(4, terminal.avg(), 0.01);
     }
 
+    @Test
+    public void whenPrintStatistics() {
+        int[] data = {1, 3, 5, 7};
+        TerminalForPrimitive terminal = new TerminalForPrimitive(data);
+        String expect = "Count = 4, Max = 7, Min = 1, Sum = 16, Average = 4.0";
+        String rsl = terminal.getStatistics();
+        assertEquals(expect, rsl);
+    }
 }

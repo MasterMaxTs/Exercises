@@ -1,6 +1,7 @@
 package ru.job4j.tracker.exercises.stream;
 
 import java.util.Arrays;
+import java.util.IntSummaryStatistics;
 
 /**
  * Класс демонстрирует применение основных методов для
@@ -11,6 +12,19 @@ public class TerminalForPrimitive {
 
     public TerminalForPrimitive(int[] data) {
         this.data = data;
+    }
+
+    /**
+     * Метод выводит в виде строки всю статистику из примитивного стрима
+     * @return возращает строку статистики
+     */
+    public String getStatistics() {
+        IntSummaryStatistics statistics = Arrays.stream(this.data).summaryStatistics();
+        return "Count = "+ statistics.getCount()
+                + ", Max = " + statistics.getMax()
+                + ", Min = " + statistics.getMin()
+                + ", Sum = " + statistics.getSum()
+                + ", Average = " + statistics.getAverage();
     }
 
     public long count() {
