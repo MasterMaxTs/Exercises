@@ -25,4 +25,12 @@ public class CollectToMapTest {
         Map<Integer, Integer> rsl = CollectToMap.collectWhenDuplicate(data);
         assertEquals(expect, rsl);
     }
+
+    @Test
+    public void WhenCollectLinkedHashMap() {
+        List<Integer> data = List.of();
+        String expect = "java.util.LinkedHashMap";
+        String rsl = CollectToMap.collectToLinkedMap(data.stream()).getClass().getName();
+        assertEquals(expect, rsl);
+    }
 }

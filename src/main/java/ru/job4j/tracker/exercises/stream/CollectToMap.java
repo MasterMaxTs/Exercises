@@ -1,5 +1,6 @@
 package ru.job4j.tracker.exercises.stream;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -22,5 +23,12 @@ public class CollectToMap {
      */
     public static Map<Integer, Integer> collectWhenDuplicate(Stream<Integer> data) {
         return data.collect(Collectors.toMap(k -> k, v -> v * v, (prev, curr) -> prev));
+    }
+
+    /*Сборка в LinkedHashMap*/
+    public static Map<Integer, Integer> collectToLinkedMap(Stream<Integer> data) {
+        return data.collect(
+                Collectors.toMap(k -> k, v -> v * v, (prev, curr) -> prev, LinkedHashMap::new)
+        );
     }
 }
