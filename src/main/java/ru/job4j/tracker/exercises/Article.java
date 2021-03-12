@@ -1,4 +1,4 @@
-package ru.job4j.tracker.collection;
+package ru.job4j.tracker.exercises;
 
 import java.util.Arrays;
 import java.util.HashSet;
