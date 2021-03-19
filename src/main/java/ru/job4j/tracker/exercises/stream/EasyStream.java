@@ -7,7 +7,6 @@ import java.util.function.Predicate;
 
 public class EasyStream {
     private List<Integer> list;
-    private List<Integer> buffer = new ArrayList<>();
 
     static class Builder {
         private List<Integer> list;
@@ -29,7 +28,7 @@ public class EasyStream {
     }
 
     public EasyStream map(Function<Integer, Integer> fun) {
-        buffer.clear();
+        List<Integer> buffer = new ArrayList<>();
         for (Integer i
                 : list) {
             buffer.add(fun.apply(i));
@@ -38,7 +37,7 @@ public class EasyStream {
     }
 
     public EasyStream filter(Predicate<Integer> fun) {
-        buffer.clear();
+        List<Integer> buffer = new ArrayList<>();
         for (Integer i
                 : list) {
             if (fun.test(i)) {
@@ -51,5 +50,4 @@ public class EasyStream {
     public List<Integer> collect() {
         return list;
     }
-
 }
