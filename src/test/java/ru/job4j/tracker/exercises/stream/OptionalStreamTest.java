@@ -18,9 +18,9 @@ public class OptionalStreamTest {
         PhoneNumber ph3 = new PhoneNumber("+9200500400");
         PhoneNumber ph4 = new PhoneNumber("+7150900200");
         PhoneNumber ph5 = new PhoneNumber("+3000800700");
-        User us1 = new User( 1, List.of(ph1, ph2));
-        User us2 = new User( 2, List.of(ph3));
-        User us3 = new User( 3, List.of(ph4, ph5));
+        User us1 = new User(1, List.of(ph1, ph2));
+        User us2 = new User(2, List.of(ph3));
+        User us3 = new User(3, List.of(ph4, ph5));
         List<User> users = List.of(us1, us2, us3);
         assertEquals(
                 "+7800200300",

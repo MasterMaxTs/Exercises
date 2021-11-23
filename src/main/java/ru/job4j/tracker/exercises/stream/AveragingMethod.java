@@ -101,10 +101,10 @@ public class AveragingMethod {
         List<Worker> workers = List.of(w1, w2, w3, w4, w5, w6, w7, w8, w9);
         workers.forEach(System.out::println);
         averaging(workers).forEach(
-                (k, v) -> System.out.println( k + " : " + v + " average age")
+                (k, v) -> System.out.println(k + " : " + v + " average age")
         );
         groupAndCount(workers).forEach(
-                (k, v) -> System.out.println( k + " : " + v + " count of workers")
+                (k, v) -> System.out.println(k + " : " + v + " count of workers")
         );
     }
 }

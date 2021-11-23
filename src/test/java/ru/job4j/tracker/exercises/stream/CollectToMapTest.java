@@ -27,7 +27,7 @@ public class CollectToMapTest {
     }
 
     @Test
-    public void WhenCollectLinkedHashMap() {
+    public void whenCollectLinkedHashMap() {
         List<Integer> data = List.of();
         String expect = "java.util.LinkedHashMap";
         String rsl = CollectToMap.collectToLinkedMap(data.stream()).getClass().getName();

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class OptionalStream {
-    public static class PhoneNumber{
+    public static class PhoneNumber {
         private String phone;
 
         public PhoneNumber(String phone) {

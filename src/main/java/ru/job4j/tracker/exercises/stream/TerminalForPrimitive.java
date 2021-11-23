@@ -20,7 +20,7 @@ public class TerminalForPrimitive {
      */
     public String getStatistics() {
         IntSummaryStatistics statistics = Arrays.stream(this.data).summaryStatistics();
-        return "Count = "+ statistics.getCount()
+        return "Count = " + statistics.getCount()
                 + ", Max = " + statistics.getMax()
                 + ", Min = " + statistics.getMin()
                 + ", Sum = " + statistics.getSum()

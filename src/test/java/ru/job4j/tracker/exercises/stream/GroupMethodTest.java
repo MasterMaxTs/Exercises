@@ -13,10 +13,10 @@ public class GroupMethodTest {
     @Test
     public void groupBy() {
         User u1 = new User(29, "Ilya");
-        User u2= new User(29, "Sergey");
-        User u3= new User(22, "Vasya");
-        User u4= new User(20, "Danya");
-        User u5= new User(20, "Vitya");
+        User u2 = new User(29, "Sergey");
+        User u3 = new User(22, "Vasya");
+        User u4 = new User(20, "Danya");
+        User u5 = new User(20, "Vitya");
         List<User> users = List.of(u1, u2, u3, u4, u5);
         Map<Integer, List<User>> expect = Map.of(
                 29, List.of(u1, u2),
