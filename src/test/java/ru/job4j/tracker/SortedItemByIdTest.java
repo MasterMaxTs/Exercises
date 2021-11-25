@@ -10,11 +10,11 @@ public class SortedItemByIdTest {
 
     @Test
     public void sortedByDecreaseName() {
-        Tracker tracker = new Tracker();
-        tracker.add(new Item("Item1"));
-        tracker.add(new Item("Item2"));
-        tracker.add(new Item("Item3"));
-        List<Item> input = tracker.findAll();
+        MemTracker memTracker = new MemTracker();
+        memTracker.add(new Item("Item1"));
+        memTracker.add(new Item("Item2"));
+        memTracker.add(new Item("Item3"));
+        List<Item> input = memTracker.findAll();
         input.sort(new SortedItemById().reversed());
         assertThat(input.get(0).getId(), is(3));
         assertThat(input.get(1).getId(), is(2));

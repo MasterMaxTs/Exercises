@@ -10,11 +10,11 @@ public class SortedItemByNameTest {
 
     @Test
     public void whenSortedByIncreaseName() {
-        Tracker tracker = new Tracker();
-        tracker.add(new Item("Planning"));
-        tracker.add(new Item("Discussing"));
-        tracker.add(new Item("Coding"));
-        List<Item> input = tracker.findAll();
+        MemTracker memTracker = new MemTracker();
+        memTracker.add(new Item("Planning"));
+        memTracker.add(new Item("Discussing"));
+        memTracker.add(new Item("Coding"));
+        List<Item> input = memTracker.findAll();
         input.sort(new SortedItemByName());
         assertThat(input.get(0).getName(), is("Coding"));
         assertThat(input.get(1).getName(), is("Discussing"));
@@ -23,11 +23,11 @@ public class SortedItemByNameTest {
 
     @Test
     public void sortedByDecreaseName() {
-        Tracker tracker = new Tracker();
-        tracker.add(new Item("Planning"));
-        tracker.add(new Item("Coding"));
-        tracker.add(new Item("Discussing"));
-        List<Item> input = tracker.findAll();
+        MemTracker memTracker = new MemTracker();
+        memTracker.add(new Item("Planning"));
+        memTracker.add(new Item("Coding"));
+        memTracker.add(new Item("Discussing"));
+        List<Item> input = memTracker.findAll();
         input.sort(new SortedItemByName().reversed());
         assertThat(input.get(0).getName(), is("Planning"));
         assertThat(input.get(1).getName(), is("Discussing"));
