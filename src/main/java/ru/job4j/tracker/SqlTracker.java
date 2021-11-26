@@ -10,14 +10,12 @@ public class SqlTracker implements Store {
 
     private Connection cn;
 
-    private void createTable(Connection cn) throws SQLException {
-        try (Statement st = cn.createStatement()) {
-            st.execute("CREATE TABLE IF NOT EXISTS items("
-                                    + "id serial primary key,"
-                                    + "name text,"
-                                    + "created timestamp)"
-                    );
-        }
+    private Item getItemFromDb(ResultSet rs) throws SQLException {
+        return new Item(
+                rs.getInt(1),
+                rs.getString(2),
+                rs.getTimestamp(3).toLocalDateTime()
+        );
     }
 
     @Override
@@ -33,7 +31,6 @@ public class SqlTracker implements Store {
                     config.getProperty("username"),
                     config.getProperty("password")
             );
-            createTable(cn);
         } catch (Exception e) {
             throw new IllegalStateException(e);
         }
@@ -102,11 +99,7 @@ public class SqlTracker implements Store {
         )) {
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
-                    listItems.add(
-                            new Item(rs.getInt(1),
-                                    rs.getString(2),
-                                    rs.getTimestamp(3).toLocalDateTime()
-                    ));
+                    listItems.add(getItemFromDb(rs));
                 }
             }
         } catch (SQLException throwables) {
@@ -125,11 +118,7 @@ public class SqlTracker implements Store {
             ps.execute();
             try (ResultSet rs  = ps.executeQuery()) {
                 while (rs.next()) {
-                    copyItem.add(new Item(
-                            rs.getInt(1),
-                            rs.getString(2),
-                            rs.getTimestamp(3).toLocalDateTime()
-                    ));
+                    copyItem.add(getItemFromDb(rs));
                 }
             }
         } catch (SQLException throwables) {
@@ -147,11 +136,7 @@ public class SqlTracker implements Store {
             ps.execute();
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    return new Item(
-                            id,
-                            rs.getString(2),
-                            rs.getTimestamp(3).toLocalDateTime()
-                    );
+                    return getItemFromDb(rs);
                 }
             }
         } catch (SQLException throwables) {
