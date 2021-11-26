@@ -2,8 +2,6 @@ package ru.job4j.tracker.exercises;
 
 import org.junit.Test;
 
-import java.util.Optional;
-
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 
