@@ -1,13 +1,14 @@
 package ru.job4j.tracker.exercises;
 
 import org.junit.Test;
+import ru.job4j.exercises.PutIfAbsent;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static ru.job4j.tracker.exercises.PutIfAbsent.User;
+import static ru.job4j.exercises.PutIfAbsent.User;
 
 public class PutIfAbsentTest {
 

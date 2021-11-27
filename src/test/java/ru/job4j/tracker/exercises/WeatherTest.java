@@ -1,13 +1,14 @@
 package ru.job4j.tracker.exercises;
 
 import org.junit.Test;
+import ru.job4j.exercises.Weather;
 
 import java.util.List;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
-import static ru.job4j.tracker.exercises.Weather.Info;
+import static ru.job4j.exercises.Weather.Info;
 
 public class WeatherTest {
 

@@ -4,7 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
-import ru.job4j.tracker.exercises.RemoveElements.User;
+
+import ru.job4j.exercises.RemoveElements;
+import ru.job4j.exercises.RemoveElements.User;
 
 import java.util.HashMap;
 import java.util.List;

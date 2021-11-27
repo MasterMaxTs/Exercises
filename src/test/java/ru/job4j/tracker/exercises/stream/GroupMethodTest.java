@@ -3,7 +3,9 @@ package ru.job4j.tracker.exercises.stream;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import ru.job4j.tracker.exercises.stream.GroupMethod.User;
+
+import ru.job4j.exercises.stream.GroupMethod;
+import ru.job4j.exercises.stream.GroupMethod.User;
 
 import java.util.List;
 import java.util.Map;

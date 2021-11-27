@@ -5,7 +5,8 @@ import org.junit.Test;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import ru.job4j.tracker.exercises.stream.UserMap.User;
+import ru.job4j.exercises.stream.UserMap;
+import ru.job4j.exercises.stream.UserMap.User;
 
 import static org.junit.Assert.assertEquals;
 

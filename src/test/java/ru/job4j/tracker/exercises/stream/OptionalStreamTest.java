@@ -3,8 +3,10 @@ package ru.job4j.tracker.exercises.stream;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import ru.job4j.tracker.exercises.stream.OptionalStream.PhoneNumber;
-import ru.job4j.tracker.exercises.stream.OptionalStream.User;
+
+import ru.job4j.exercises.stream.OptionalStream;
+import ru.job4j.exercises.stream.OptionalStream.PhoneNumber;
+import ru.job4j.exercises.stream.OptionalStream.User;
 
 import java.util.List;
 import java.util.stream.Collectors;

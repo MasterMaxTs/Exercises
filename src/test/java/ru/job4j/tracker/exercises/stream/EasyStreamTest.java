@@ -3,6 +3,8 @@ package ru.job4j.tracker.exercises.stream;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
 import org.junit.Test;
+import ru.job4j.exercises.stream.EasyStream;
+
 import java.util.List;
 
 public class EasyStreamTest {

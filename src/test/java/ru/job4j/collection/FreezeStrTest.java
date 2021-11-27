@@ -1,7 +1,7 @@
 package ru.job4j.collection;
 
 import org.junit.Test;
-import ru.job4j.tracker.exercises.FreezeStr;
+import ru.job4j.exercises.FreezeStr;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;

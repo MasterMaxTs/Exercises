@@ -2,6 +2,7 @@ package ru.job4j.tracker.exercises;
 
 import org.junit.Assert;
 import org.junit.Test;
+import ru.job4j.exercises.MethodReference;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

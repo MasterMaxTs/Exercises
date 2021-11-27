@@ -3,8 +3,8 @@ package ru.job4j.tracker.exercises;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import ru.job4j.tracker.exercises.OptionalOrElseThrow.User;
-import ru.job4j.tracker.exercises.OptionalOrElseThrow.UserNotFoundException;
+import ru.job4j.exercises.OptionalOrElseThrow.User;
+import ru.job4j.exercises.OptionalOrElseThrow.UserNotFoundException;
 
 import java.util.List;
 

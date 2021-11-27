@@ -4,7 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.Matchers.is;
-import ru.job4j.tracker.exercises.Merge.User;
+
+import ru.job4j.exercises.Merge;
+import ru.job4j.exercises.Merge.User;
 
 import java.util.HashMap;
 import java.util.List;

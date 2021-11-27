@@ -6,8 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
-import ru.job4j.tracker.exercises.stream.SummingMethod.Bill;
-import ru.job4j.tracker.exercises.stream.SummingMethod.User;
+
+import ru.job4j.exercises.stream.SummingMethod;
+import ru.job4j.exercises.stream.SummingMethod.Bill;
+import ru.job4j.exercises.stream.SummingMethod.User;
 
 public class SummingMethodTest {
 

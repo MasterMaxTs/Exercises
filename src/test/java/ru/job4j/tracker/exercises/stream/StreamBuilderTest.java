@@ -1,6 +1,7 @@
 package ru.job4j.tracker.exercises.stream;
 
 import org.junit.Test;
+import ru.job4j.exercises.stream.StreamBuilder;
 
 import java.util.List;
 import java.util.stream.Collectors;

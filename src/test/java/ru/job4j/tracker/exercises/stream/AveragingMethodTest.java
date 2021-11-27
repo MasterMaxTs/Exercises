@@ -4,8 +4,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import ru.job4j.tracker.exercises.stream.AveragingMethod.Company;
-import ru.job4j.tracker.exercises.stream.AveragingMethod.Worker;
+
+import ru.job4j.exercises.stream.AveragingMethod;
+import ru.job4j.exercises.stream.AveragingMethod.Company;
+import ru.job4j.exercises.stream.AveragingMethod.Worker;
 
 import java.util.ArrayList;
 import java.util.List;

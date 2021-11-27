@@ -1,6 +1,7 @@
 package ru.job4j.tracker.exercises;
 
 import org.junit.Test;
+import ru.job4j.exercises.MRPredicate;
 
 import java.util.function.Predicate;
 

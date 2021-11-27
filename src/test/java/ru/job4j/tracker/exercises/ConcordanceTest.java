@@ -1,6 +1,7 @@
 package ru.job4j.tracker.exercises;
 
 import org.junit.Test;
+import ru.job4j.exercises.Concordance;
 
 import java.util.HashMap;
 import java.util.List;
